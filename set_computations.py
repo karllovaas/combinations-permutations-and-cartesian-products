@@ -70,19 +70,6 @@ def cartesian_product(X):
         output = grow(output,i)
     return output 
 
-def with_sampling(X): ## rename this function the name is terrible 
-    indx = set({})
-    for i in range(len(X)):
-        for j in range(len(X[i])):
-            if X[i].count(X[i][j]) >= 2:
-                indx = indx | {i}
-    t = [X[i] for i in indx]
-    for l in t:
-        if l in X:
-            X.remove(l)
-    return X
-
-
 def permuter2(n,k):
     '''
 
